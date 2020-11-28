@@ -1,4 +1,5 @@
-Escopo do Projeto Final do Bootcamp da Reprograma em Desenvolvimento Web em Back-End.
+
+Escopo em andamento do Projeto Final do Bootcamp da Reprograma em Desenvolvimento Web em Back-End.
 
 <h1><center>hortalivery</center></h1>
 
@@ -22,6 +23,7 @@ npm start
 <h2>Rotas</h2>
 
 A API está sendo escutada na `x`, dessa forma, para todas as rotas serem acessadas localmente, use `http://localhost:x/` antes do caminho da rota
+
 
 Serão usados os métodos:
 
