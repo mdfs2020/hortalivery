@@ -1,8 +1,4 @@
-#hortalivery
-
-# hortalivery
-
-Escopo do Projeto Final do Bootcamp da Reprograma em Desenvolvimento Web em Back-End.
+Escopo em andamento do Projeto Final do Bootcamp da Reprograma em Desenvolvimento Web em Back-End.
 
 <h1><center>hortalivery</center></h1>
 
@@ -27,7 +23,7 @@ npm start
 
 A API está sendo escutada na `porta 8080`, dessa forma, para todas as rotas serem acessadas localmente, use `http://localhost:8080/` antes do caminho da rota
 
-- POST `
+- POST 
 
 - POST 
 
@@ -35,7 +31,7 @@ A API está sendo escutada na `porta 8080`, dessa forma, para todas as rotas ser
 
 - GET 
 
-- PATCH 
+- PATH 
 
 - DELETE 
 
