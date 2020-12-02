@@ -69,7 +69,7 @@ O objeto venda
 3 - tp_situacao (situação da compra)
 4 - it_venda (array de produtos)
 
-### Referências de hábitos saudáveis:
+### Referências de Hábitos Saudáveis:
 
 1. 
 2. 
