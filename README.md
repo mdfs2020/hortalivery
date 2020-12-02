@@ -1,7 +1,5 @@
 
-Escopo em andamento do Projeto Final do Bootcamp da Reprograma em Desenvolvimento Web em Back-End.
-
-<h1><center>hortalivery</center></h1>
+<h1><center>Hortalivery</center></h1>
 
 Tem alguém que vai se beneficiar do meu projeto e precisa da minha voz.
 O Hortalivery surgiu logo no início do reprograma, a ideia da IPI é contribuir, apoiar e estimular práticas alimentares saudáveis.
