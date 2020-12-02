@@ -45,29 +45,26 @@ Serão usados os métodos:
 
 <h2>Regras de Negócio</h2>
 
-1 - O processo de venda só será concluído através da definição de concluído ou cancelado, o cliente não poderá
-sair do processo de montagem do kit a não ser que uma dessas duas fases seja definida.
+<p>1 - O processo de venda só será concluído através da definição de concluído ou cancelado, o cliente não poderá sair do processo de montagem do kit a não ser que uma dessas duas fases seja definida.</p>
 
-2 - Ao selecionar um item kit, o usuário será obrigado a informar os itens, sendo esse: 
-2.1 - Item a item;
-2.2 - Que não seja menor ou maior a quantidade do kit. 
-Por exemplo:
+<p>2 - Ao selecionar um item kit, o usuário será obrigado a informar os itens, sendo esse:</p>
+<p>2.1 - Item a item;</p>
+<p>2.2 - Que não seja menor ou maior a quantidade do kit.</p> 
+<p>Por exemplo:
 Se a quantidade definida do kit "Semana Feliz" for composta por três itens, o usuário não poderá concluir a venda informando 
-uma quantidade menor ao kit, o sistema informará ao usuário que falta itens para conclusão do kit;
-Se o usuário informar uma quantidade maior ao kit, o sistema informará ao usuário que a quantidade de itens ultrapassa a 
-quantidade esperada;
-2.3 - Caso o usuário saia da sessão, ao retornar, o sistema dará continuidade ao processo de conclusão do kit;
-2.4 - A qualquer momento o usuário poderá utilizar de um mecanismo de saída (cancelar) , que deverá ser proposto a ele a 
-cada informação de itens no kit;
+uma quantidade menor ao kit, o sistema informará ao usuário que falta itens para conclusão do kit;</p>
+<p>Se o usuário informar uma quantidade maior ao kit, o sistema informará ao usuário que a quantidade de itens ultrapassa a quantidade esperada;</p>
+<p>2.3 - Caso o usuário saia da sessão, ao retornar, o sistema dará continuidade ao processo de conclusão do kit;</p>
+<p>2.4 - A qualquer momento o usuário poderá utilizar de um mecanismo de saída (cancelar) , que deverá ser proposto a ele a cada informação de itens no kit;</p>
 
-3 - O processo de conclusão será compreendido pela montagem de todos os itens do kit seguido de uma mensagem ao usuário que
-deseja prosseguir com a compra, do contrário, o processo será cancelado.
+<p>3 - O processo de conclusão será compreendido pela montagem de todos os itens do kit seguido de uma mensagem ao usuário que deseja prosseguir com a compra, do contrário, o processo será cancelado.</p>
 
-O objeto venda
-1 - cd_produto (produto kit)
-2 - cd_cliente (cliente da compra)
-3 - tp_situacao (situação da compra)
-4 - it_venda (array de produtos)
+<h2>Objeto Venda</h2>
+
+<p>1 - cd_produto (produto kit)</p>
+<p>2 - cd_cliente (cliente da compra)</p>
+<p>3 - tp_situacao (situação da compra)</p>
+<p>4 - it_venda (array de produtos)</p>
 
 ### Referências de Hábitos Saudáveis:
 
