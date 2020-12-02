@@ -45,7 +45,7 @@ Serão usados os métodos:
 7 - O sistema retorna uma lista com o kit montado;
 
 
-<h2>Regras de negócio</h2>
+<h2>Regras de Negócio</h2>
 
 1 - O processo de venda só será concluído através da definição de concluído ou cancelado, o cliente não poderá
 sair do processo de montagem do kit a não ser que uma dessas duas fases seja definida.
