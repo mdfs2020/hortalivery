@@ -60,12 +60,25 @@ uma quantidade menor ao kit, o sistema informará ao usuário que falta itens pa
 
 <p>3 - O processo de conclusão será compreendido pela montagem de todos os itens do kit seguido de uma mensagem ao usuário que deseja prosseguir com a compra, do contrário, o processo será cancelado.</p>
 
+<h2>Objeto Produtos</h2>
+
+<p>1 - nome</p>
+<p>2 - tp_categoria</p>
+<p>3 - sn_kit</p>
+<p>4 - qt_item</p>
+
 <h2>Objeto Venda</h2>
 
 <p>1 - cd_produto (produto kit)</p>
 <p>2 - cd_cliente (cliente da compra)</p>
 <p>3 - tp_situacao (situação da compra)</p>
 <p>4 - it_venda (array de produtos)</p>
+
+<h2>Objeto Cliente</h2>
+
+<p>1 - nome</p>
+<p>2 - email</p>
+<p>3 - senha</p>
 
 ### Referências de Hábitos Saudáveis:
 
