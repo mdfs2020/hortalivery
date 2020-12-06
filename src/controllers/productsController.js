@@ -14,20 +14,31 @@ const getAll = (req, res) => {
     });
 };
 
+const getByKit = (req, res) => {
+  
+  products.find(function(err, products){
+    if(err) { 
+      return res.status(500).send({ message: err.message })
+    }
+      return res.status(200).send(products.filter(products => products.kit==(true)));
+  });
+};
+
+
 const postProducts = (req, res) => {
   
-  let Products = new products(req.body)
+  let Products = new products(req.body);
 
   Products.save(function(err){
     if(err) { 
-      res.status(500).send({ message: err.message })
+      return res.status(500).send({ message: err.message })
     }
-    res.status(201).send(Products.toJSON())
-  });
-  
+      return res.status(201).send(Products.toJSON())
+  });  
 };
 
 module.exports = {
   getAll,
+  getByKit,
   postProducts
 };

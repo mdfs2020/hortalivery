@@ -21,9 +21,9 @@ db.once("open", function (){
 });
 
 //rotas
-const index = require("./routes/index")
-const products = require("./routes/productsRoute")
-//const clients = require("./routes/clientsRoute")
+const index = require("./routes/index");
+const products = require("./routes/productsRoute");
+const clients = require("./routes/clientsRoute");
 
 
 app.use(function (req, res, next) {
@@ -37,6 +37,6 @@ app.use(function (req, res, next) {
 
 app.use("/", index);
 app.use("/products", products);
-//app.use("/clients", clients);
+app.use("/clients", clients);
 
 module.exports = app;
