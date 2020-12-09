@@ -4,8 +4,8 @@ const mongoose = require('mongoose');
 const ProductsSchema = new mongoose.Schema({
     name : { type: String },
     category: { type: String },
-    kit: { type: Boolean },
-    amount: {type: Number}
+    kit: { type: Boolean, default: false },
+    amount: {type: Number, default:0}
 },
 {
     //gera por padrão uma versão para cada atualização do documento
@@ -17,4 +17,7 @@ const ProductsSchema = new mongoose.Schema({
 const Products = mongoose.model('Products', ProductsSchema);
 
 // exportar o model para ser utilizado
-module.exports = Products;
+module.exports = {
+    Products,
+    ProductsSchema
+};

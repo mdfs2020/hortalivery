@@ -1,11 +1,13 @@
 const mongoose = require('mongoose');
+const { ProductsSchema } = require('./products');
+const { clientsSchema } = require('./clients');
 
 //estrutura do seu model (atributos da sua entidade)
 const SalesSchema = new mongoose.Schema({
-    product : { type: Object },
-    client: { type: Object },
+    product : ProductsSchema,
+    client: clientsSchema,
     situation: { type: String },
-    items: {type: [Object]}
+    items: [ProductsSchema]
 },
 {
     //gera por padrão uma versão para cada atualização do documento

@@ -8,30 +8,30 @@ const SECRET = process.env.SECRET;
 
 const getAll = (req, res) => {
     
-    clients.find(function(err, clients){
+    clients.find(function(err, client){
       if(err) { 
         return res.status(500).send({ message: err.message })
       }
-        return res.status(200).send(clients);
+        return res.status(200).send(client);
     });
 };
 
 const postClients = (req, res) => {
 
-const clients = new clients(req.body);
+const client = new clients(req.body);
 
-  clients.save(function(err){
+  client.save(function(err){
     if(err) { 
       return res.status(500).send({ message: err.message })
     }
-      return res.status(201).send(clients);
+      return res.status(201).send(client);
   })
 };
 
 const login = (req, res) => {
 
-  clients.findOne( { email: req.body.email }, (err, clients) => {
-    if (!clients) {
+  clients.findOne( { email: req.body.email }, (err, client) => {
+    if (!client) {
       return res.status(404).send(`Email ${req.body.email} não encontrado`);
     };
 

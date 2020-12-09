@@ -15,4 +15,7 @@ const clientsSchema = new mongoose.Schema({
 const clients = mongoose.model('clients', clientsSchema);
 
 // exportar o model para ser utilizado
-module.exports = clients;
+module.exports = {
+    clients,
+    clientsSchema
+};

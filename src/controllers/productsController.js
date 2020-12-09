@@ -1,39 +1,39 @@
 //apontamento do model que criamos para as products
 //const { JsonWebTokenError } = require('jsonwebtoken');
-const products = require('../models/products');
+const {Products} = require('../models/products');
 //const SECRET = process.env.SECRET;
 //const jwt = require('jsonwebtoken');
 
 const getAll = (req, res) => {
   
-    products.find(function(err, products){
+  Products.find(function(err, product){
       if(err) { 
         return res.status(500).send({ message: err.message })
       }
-        return res.status(200).send(products);
+        return res.status(200).send(product);
     });
 };
 
 const getByKit = (req, res) => {
   
-  products.find(function(err, products){
+  Products.find(function(err, product){
     if(err) { 
       return res.status(500).send({ message: err.message })
     }
-      return res.status(200).send(products.filter(products => products.kit==(true)));
+      return res.status(200).send(product.filter(product => product.kit==(true)));
   });
 };
 
 
 const postProducts = (req, res) => {
   
-  let Products = new products(req.body);
+  let product = new Products(req.body);
 
-  Products.save(function(err){
+  product.save(function(err){
     if(err) { 
       return res.status(500).send({ message: err.message })
     }
-      return res.status(201).send(Products.toJSON())
+      return res.status(201).send(product);
   });  
 };
 
