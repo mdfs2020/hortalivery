@@ -7,6 +7,8 @@ const controllerSales = require("../controllers/salesController");
 router.get("/", controller.getAll);
 router.get("/kits", controller.getByKit);
 router.post("/", controller.postProducts);
+router.put("/", controller.putProduct);
+router.delete("/", controller.deleteproduct);
 router.post("/sales", controllerSales.postSales);
 router.post("/sales/itens", controllerSales.postItemSales);
 

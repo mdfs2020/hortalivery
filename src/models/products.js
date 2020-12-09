@@ -5,7 +5,7 @@ const ProductsSchema = new mongoose.Schema({
     name : { type: String },
     category: { type: String },
     kit: { type: Boolean, default: false },
-    amount: {type: Number, default:0}
+    amount: {type: Number, default: 0}
 },
 {
     //gera por padrão uma versão para cada atualização do documento

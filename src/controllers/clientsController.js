@@ -1,10 +1,5 @@
-//const { JsonWebTokenError } = require('jsonwebtoken');
 const clients = require('../models/clients');
-//const bcrypt = require('bcrypt');
-//const jwt = require('jsonwebtoken');
 const SECRET = process.env.SECRET;
-
-
 
 const getAll = (req, res) => {
     
@@ -35,7 +30,7 @@ const login = (req, res) => {
       return res.status(404).send(`Email ${req.body.email} não encontrado`);
     };
 
-    const senhaValida = '';//bcrypt.compareSync(req.body.senha, client.senha);
+    const senhaValida = '';
     
     if (!senhaValida) {
       return res.status(403).send('Senha incorreta');

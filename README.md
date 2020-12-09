@@ -1,13 +1,54 @@
 
 <h1><center>Hortalivery</center></h1>
 
+![Logotipo com o nome do projeto](./image/hortalivery.jpg)
+
+<br>
+
 Tem alguém que vai se beneficiar do meu projeto e precisa da minha voz.
 O Hortalivery surgiu logo no início do reprograma, a ideia da IPI é contribuir, apoiar e estimular práticas alimentares saudáveis.
-Gosto de pensar na ideia de que estamos aqui para colaborar com a sociedade e com bons hábitos alimentares.
+Gosto de pensar na ideia de que estamos aqui para colaborar com a sociedade e com o bem estar.
+
+<br>
+
+```
+BANCO DE DADOS
+```
+### Objeto Produto
+
+| Verbo  | Recurso                | Descrição                                         |
+| ------ | ---------------------- | ------------------------------------------------- |
+| GET    | `/products`            | Retorna todos os produtos                         |
+| GET    | `/products/kits`       | Retorna todos os produtos caracyerizados como kit |
+| POST   | `/products`            | Cadastra um novo produto                          |
+| PUT    | `/products`            | Atualiza um produto específico                    |
+| DELETE | `/products`            | Deleta um produto específico                      |
+
+<br>
+
+### Objeto Cliente
+
+| Verbo  | Recurso                | Descrição                                         |
+| ------ | ---------------------- | ------------------------------------------------- |
+| GET    | `/clients`             | Retorna todos os clientes                         |
+| POST   | `/clients`             | Cadastra um novo cliente                          |
+
+<br>
+
+### Objeto Venda
+
+| Verbo  | Recurso                | Descrição                                         |
+| ------ | ---------------------- | ------------------------------------------------- |
+| POST   | `/sales`               | cadastrar uma nova venda                          |
+| POST   | `/sales/itens`         | Cadastra itens da venda                           |
+
+<br>
 
 <h2>Pré-requisitos</h2>
 
 Para utilizar essa API, é necessário ter instalado na sua máquina as tecnologias Node.JS e MongoDB.
+
+<br>
 
 <h2>Utilização</h2>
 
@@ -16,22 +57,19 @@ Para inicialiazar o server:
 ```
 npm start
 ```
+<br>
 
 <h2>Rotas</h2>
 
-A API está sendo escutada na porta `x`, dessa forma, para todas as rotas serem acessadas localmente, use `http://localhost:x/` antes do caminho da rota
+A API está sendo escutada no servidor local na porta `8080`, dessa forma, para todas as rotas serem acessadas localmente, use `http://localhost:8080/` antes do caminho da rota.
 
+Servidor em produção `https://hortalivery.herokuapp.com/`
 
-Serão usados os Métodos:
+Para execução dos testes, é necessário configurar a variável de ambiente que é a URL do MongoDB.
 
-- POST 
+Para clonar e executar a aplicação, precisa ter o [Git](https://git-scm.com), [Node.js v12.18.3](https://nodejs.org/en/) e [MongoDB](https://www.mongodb.com/) instalados.
 
-- GET 
-
-- PUT 
-
-- DELETE
-
+<br>
 
 <h2>Exemplos Práticos</h2>
 
@@ -43,11 +81,11 @@ Serão usados os Métodos:
 <p>6 - O usuário seleciona os itens;</p>
 <p>7 - O sistema retorna uma lista com o kit montado;</p>
 
+<br>
 
 <h2>Regras de Negócio</h2>
 
 <p>1 - O processo de venda só será concluído através da definição de concluído ou cancelado, o cliente não poderá sair do processo de montagem do kit a não ser que uma dessas duas fases seja definida.</p>
-
 <p>2 - Ao selecionar um item kit, o usuário será obrigado a informar os itens, sendo esse:</p>
 <p>2.1 - Item a item;</p>
 <p>2.2 - Que não seja menor ou maior a quantidade do kit.</p> 
@@ -60,32 +98,22 @@ uma quantidade menor ao kit, o sistema informará ao usuário que falta itens pa
 
 <p>3 - O processo de conclusão será compreendido pela montagem de todos os itens do kit seguido de uma mensagem ao usuário que deseja prosseguir com a compra, do contrário, o processo será cancelado.</p>
 
-<h2>Objeto Produtos</h2>
+<br>
 
-<p>1 - nome</p>
-<p>2 - tp_categoria</p>
-<p>3 - sn_kit</p>
-<p>4 - qt_item</p>
+### Clonar o repositório
 
-<h2>Objeto Venda</h2>
+$ git clone https://github.com/mdfs2020/hortalivery
 
-<p>1 - cd_produto (produto kit)</p>
-<p>2 - cd_cliente (cliente da compra)</p>
-<p>3 - tp_situacao (situação da compra)</p>
-<p>4 - it_venda (array de produtos)</p>
+# Entrar na pasta do repositório
+$ cd hortalivery
 
-<h2>Objeto Cliente</h2>
+# Instalar as dependências
+$ npm install
 
-<p>1 - nome</p>
-<p>2 - email</p>
-<p>3 - senha</p>
+# Executar o servidor
+$ npm start
 
-### Referências de Hábitos Saudáveis:
+<br>
 
-1. 
-2. 
-3. 
-4. 
-5. 
 
-P.S Ressalto que, o projeto está em fase de análises, testes e desenvolvimento para a liberação.
+P.S  projeto está em fase de análises, testes e desenvolvimento para a liberação.

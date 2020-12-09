@@ -7,13 +7,13 @@ async function  postSales  (req, res)  {
     
     const produto = await Products.find({name: req.body.name});
     const produtos = await Products.find({kit: false});
-    if(produto.length === 0) {
+    if(produto.length == 0) {
       return res.status(404).send({ message: 'Atenção: Produto não localizado!' });
     };
 
     const client = await clients.find({email: req.body.email});
      
-    if(client.length === 0){
+    if(client.length == 0){
       return res.status(404).send({ message: 'Atenção: Cliente não localizado!' });
     }
     req.body.product = produto[0];
@@ -39,7 +39,7 @@ async function  postSales  (req, res)  {
       };
       const venda = await sales.find({"client.email": req.body.email,situation: "Pending"});
 
-      if(venda.length === 0){
+      if(venda.length == 0){
         return res.status(404).send({ message: 'Atenção: Não foi detectada nenhuma venda com as caracteristicas informadas!' });
       };
       
