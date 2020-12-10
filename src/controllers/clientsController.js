@@ -36,8 +36,7 @@ const login = (req, res) => {
       return res.status(403).send('Senha incorreta');
     }else{
 
-    /*const token = jwt.sign({ email: req.body.email}, SECRET);
-      return res.status(201).send(token);*/
+    /*Login em fase de desenvolvimento*/
     }
   });
 };

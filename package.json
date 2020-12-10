@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/reprograma/hortalivery"
   },
-  "homepage": "https://github.com/reprograma/on7-porto-s12-banco-de-dados#readme",
+  "homepage": "https://github.com/reprograma/hortalivery#readme",
   "dependencies": {
     "bcrypt": "^5.0.0",
     "body-parser": "^1.19.0",
