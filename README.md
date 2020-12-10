@@ -6,7 +6,6 @@
 <br>
 
 Hortalivery surgiu logo no início do reprograma, com a ideia de ajudar meu pai e entregar qualidade com agilidade na casa das pessoas.
-Gosto de pensar na ideia de que estamos aqui para colaborar com a sociedade e com o bem estar.
 
 <br>
 
@@ -55,36 +54,33 @@ EXEMPLOS PRÁTICOS
 <p>- [x] O usuário seleciona os produtos com a quantidade definida pela escolha do Kit;</p>
 <p>- [x] O sistema retorna uma lista com o kit montado;</p>
 
-<br>
 
 ```
 REGRAS DO NEGÓCIO
 ```
-<br>
 
-<p>1 - O processo de venda só será concluído através da definição de concluído ou cancelado, o cliente não poderá sair do processo de montagem do Kit a não ser que, uma dessas fases sejam definidas.</p>
-<br>
+- [x]O processo de venda só será concluído através da definição de concluído ou cancelado, o cliente não poderá sair do processo de montagem do Kit a não ser que, uma dessas fases sejam definidas.
 
-<p>2 - Ao selecionar um item Kit, o usuário será obrigado a informar os itens, seguindo a regra:</p>
-<p>2.1 - Item a item;</p>
-<p>2.2 - Que não seja menor ou maior a quantidade do Kit escolhido.</p> 
-<br>
 
-<p>-Exemplo:</p>
-<p>Se a quantidade definida do kit "Semana Feliz" for composta por três itens, o usuário não poderá concluir a venda informando uma quantidade menor definida na escolha do Kit, caso ocorra, o sistema informará ao usuário que falta itens para conclusão do kit;</p>
-<br>
+- [x]Ao selecionar um item Kit, o usuário será obrigado a informar os itens, seguindo a regra:
 
-<p>Se o usuário informar uma quantidade maior a escolha do Kit, o sistema informará ao usuário que a quantidade de itens ultrapassa a quantidade definida do Kit escolhido;</p>
-<br>
+- [x]Item a item;
+- [x]Que não seja menor ou maior a quantidade do Kit escolhido.
 
-<p>2.3 - Caso o usuário saia da sessão, ao retornar, o sistema dará continuidade ao processo de conclusão do Kit;</p>
-<br>
+```
+Exemplo:
+Se a quantidade definida do kit "Semana Feliz" for composta por três itens, o usuário não poderá concluir a venda informando uma quantidade menor definida na escolha do Kit, caso ocorra, o sistema informará ao usuário que falta itens para conclusão do kit;
+```
 
-<p>2.4 - A qualquer momento o usuário poderá utilizar de um mecanismo de saída (cancelar) , que deverá ser proposto a ele a cada interação do Kit;</p>
-<br>
+```
+Se o usuário informar uma quantidade maior a escolha do Kit, o sistema informará ao usuário que a quantidade de itens ultrapassa a quantidade definida do Kit escolhido;
+```
 
-<p>3 - O processo de conclusão será compreendido pela montagem de todos os itens do Kit, seguido de uma mensagem ao usuário que deseja prosseguir com a compra, venda concluída com sucesso.</p>
-<br>
+- [x]Caso o usuário saia da sessão, ao retornar, o sistema dará continuidade ao processo de conclusão do Kit;
+
+- [x]A qualquer momento o usuário poderá utilizar de um mecanismo de saída (cancelar) , que deverá ser proposto a ele a cada interação do Kit;
+
+- [x]O processo de conclusão será compreendido pela montagem de todos os itens do Kit, seguido de uma mensagem ao usuário que deseja prosseguir com a compra, venda concluída com sucesso.
 
 
 ```
@@ -105,7 +101,27 @@ Para clonar e executar a aplicação, precisa ter o [Git](https://git-scm.com), 
 <br>
 
 ```
-INFORMAÇÕES DA API
+ESTRUTURA E COMANDOS PARA EXECUÇÃO DA API
+```
+
+```
+hortalivery
+├── src
+│   ├── controllers
+|       ├── clientsController.js
+|       ├── productsController.js
+|       ├── salesController.js
+│   ├── models
+|       ├── clients.js
+|       ├── products.js
+|       ├── sales.js
+│   ├── routes
+│       ├── clientsRoute.js
+│       ├── index.js
+|       ├── productsRoute.js
+|   ├── app.js
+├── package.json
+├── server.js
 ```
 
 $ git clone https://github.com/mdfs2020/hortalivery
