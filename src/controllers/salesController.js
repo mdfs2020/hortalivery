@@ -25,7 +25,7 @@ async function  postSales  (req, res)  {
         if(err) { 
           return res.status(500).send({ message: err.message })
         }
-          const msg = "Atenção: foi selecionado o item: "+sale.product.name+'. Selecione '+sale.product.amount+' produtos da lista abaixo, informando sua descrição separada por vírgula. Caso deseje cancelar, informe Cancelar';
+          const msg = "Atenção: foi selecionado o Kit: "+sale.product.name+'. Selecione '+sale.product.amount+' produtos da lista abaixo, informando sua descrição separada por vírgula. Caso deseje cancelar, informe Cancelar';
           return res.status(201).send({ message: msg, sale, produtos });
       });
     };
@@ -64,7 +64,7 @@ async function  postSales  (req, res)  {
       };
       
       const sale = new sales(venda[0]);
-      if(status!=undefined && status=="Canceled"){
+      if(status!=undefined && status=="Cancelar venda"){
         sale.situation = "Canceled";
         sale.save();
         const msg = 'Atenção: Venda cancelada com sucesso!';
@@ -86,7 +86,19 @@ async function  postSales  (req, res)  {
       };  
     };
 
+    async function  getConcludedSales  (req, res)  {
+      const venda = await sales.find({"situation": "Concluded"});
+      return res.status(201).send({venda});
+    }; 
+
+    async function  getCanceledSales  (req, res)  {
+      const venda = await sales.find({"situation": "Canceled"});
+      return res.status(201).send({venda});
+    }; 
+
     module.exports = {
         postSales,
-        postItemSales
+        postItemSales,
+        getConcludedSales,
+        getCanceledSales
     };

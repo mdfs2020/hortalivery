@@ -1,4 +1,4 @@
-const clients = require('../models/clients');
+const { clients } = require('../models/clients');
 const SECRET = process.env.SECRET;
 
 const getAll = (req, res) => {
@@ -23,6 +23,7 @@ const client = new clients(req.body);
   })
 };
 
+/*Login em fase de desenvolvimento*/
 const login = (req, res) => {
 
   clients.findOne( { email: req.body.email }, (err, client) => {
@@ -36,7 +37,6 @@ const login = (req, res) => {
       return res.status(403).send('Senha incorreta');
     }else{
 
-    /*Login em fase de desenvolvimento*/
     }
   });
 };

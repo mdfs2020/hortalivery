@@ -11,5 +11,7 @@ router.put("/", controller.putProduct);
 router.delete("/", controller.deleteproduct);
 router.post("/sales", controllerSales.postSales);
 router.post("/sales/itens", controllerSales.postItemSales);
+router.get("/sales/concluded", controllerSales.getConcludedSales);
+router.get("/sales/canceled", controllerSales.getCanceledSales);
 
 module.exports = router; 

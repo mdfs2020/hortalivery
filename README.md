@@ -16,9 +16,9 @@ CRUD
 
 | Verbo  | Recurso                | Descrição                                          |
 | ------ | ---------------------- | -------------------------------------------------- |
+| POST   | `/products`            | Cadastrar um novo produto                          |
 | GET    | `/products`            | Retornar todos os produtos                         |
 | GET    | `/products/kits`       | Retornar todos os produtos caracterizados como kit |
-| POST   | `/products`            | Cadastrar um novo produto                          |
 | PUT    | `/products`            | Atualizar um produto específico                    |
 | DELETE | `/products`            | Deletar um produto específico                      |
 
@@ -28,17 +28,21 @@ CRUD
 
 | Verbo  | Recurso                | Descrição                                          |
 | ------ | ---------------------- | -------------------------------------------------- |
-| GET    | `/clients`             | Retornar todos os clientes                         |
 | POST   | `/clients`             | Cadastrar um novo cliente                          |
+| GET    | `/clients`             | Retornar todos os clientes                         |
 
 <br>
 
 ### Objeto Venda
 
-| Verbo  | Recurso                | Descrição                                         |
-| ------ | ---------------------- | ------------------------------------------------- |
-| POST   | `/sales`               | cadastrar uma nova venda                          |
-| POST   | `/sales/itens`         | Cadastra itens da venda                           |
+| Verbo  | Recurso                         | Descrição                                         |
+| ------ | ----------------------          | ------------------------------------------------- |
+| POST   | `/products/sales`               | Cadastrar uma nova venda                          |
+| POST   | `/products/sales/itens`         | Cadastrar itens da venda                          |
+| POST   | `/products/sales/itens`         | Cancelar uma venda                                |
+| GET    | `/products/sales`               | Retornar todas as vendas                          |
+| GET    | `/products/sales/concluded`     | Retornar todas as vendas concluídas               |
+| GET    | `/products/sales/canceled`      | Retornar todas as vendas canceladas               |
 
 <br>
 
@@ -92,9 +96,9 @@ Necessário ter instalado na sua máquina as tecnologias Node.JS, MongoDB e Hero
 
 A API está sendo escutada no servidor local na porta `8080`, dessa forma, para todas as rotas serem acessadas localmente, use `http://localhost:8080/` antes do caminho da rota.
 
-o Servidor em produção está rodando na URL `https://hortalivery.herokuapp.com/`
+O Servidor em produção está rodando na URL `https://hortalivery.herokuapp.com/`
 
-Configurar a variável de ambiente que é a URL do MongoDB.
+Configurar a variável de ambiente, URL do MongoDB.
 
 Para clonar e executar a aplicação, precisa ter o [Git](https://git-scm.com), [Node.js v12.18.3](https://nodejs.org/en/) e [MongoDB](https://www.mongodb.com/) instalados.
 
@@ -138,4 +142,5 @@ $ npm start
 <br>
 
 
-P.S  projeto está em fase de análises, testes e desenvolvimento para a liberação.
+P.S Primeira liberação sendo entregue em 12 de Dezembro de 2020.
+O projeto continuiará pós programa, em desenvolvimento e testes.
