@@ -51,7 +51,9 @@ async function  postSales  (req, res)  {
       for (let i = 0; i < busca.length; i++ ) {
         let produtoBusca = await Products.find({name: busca[i]});
         if(produtoBusca.length>0){
-          produtos.push(produtoBusca[0]);
+          if(produtoBusca[0].name!=undefined) {
+            produtos.push(produtoBusca[0]); 
+          }
         };
       };
 
