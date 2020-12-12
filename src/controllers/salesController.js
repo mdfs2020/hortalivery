@@ -64,7 +64,7 @@ async function  postSales  (req, res)  {
       };
       
       const sale = new sales(venda[0]);
-      if(status!=undefined && status=="Cancelar"){
+      if(status!=undefined && status=="Cancelado"){
         sale.situation = "Canceled";
         sale.save();
         const msg = 'Atenção: Venda cancelada com sucesso!';
