@@ -40,7 +40,6 @@ CRUD
 | POST   | `/products/sales`               | Cadastrar uma nova venda                          |
 | POST   | `/products/sales/itens`         | Cadastrar itens da venda                          |
 | POST   | `/products/sales/itens`         | Cancelar uma venda                                |
-| GET    | `/products/sales`               | Retornar todas as vendas                          |
 | GET    | `/products/sales/concluded`     | Retornar todas as vendas concluídas               |
 | GET    | `/products/sales/canceled`      | Retornar todas as vendas canceladas               |
 
