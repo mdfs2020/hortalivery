@@ -44,7 +44,7 @@ async function  postSales  (req, res)  {
       };
       
       if((venda[0].product.amount-venda[0].items.length) < busca.length){
-        return res.status(500).send({ message: 'Atenção: Foram informados mais itens do que a quantidade pendente no kit '+(venda[0].product.amount-venda[0].items.length)+', por favor verifique os itens informados!' });
+        return res.status(500).send({ message: 'Atenção: Foram informados mais itens do que a quantidade pendente no kit, por favor verifique os itens informados!' });
       };
 
       const produtos = [];
@@ -64,7 +64,7 @@ async function  postSales  (req, res)  {
       };
       
       const sale = new sales(venda[0]);
-      if(status!=undefined && status=="Cancelar venda"){
+      if(status!=undefined && status=="Cancelar"){
         sale.situation = "Canceled";
         sale.save();
         const msg = 'Atenção: Venda cancelada com sucesso!';
@@ -72,7 +72,7 @@ async function  postSales  (req, res)  {
       }
 
       if((venda[0].product.amount-venda[0].items.length)>0){
-        const msg01 = 'Atenção: Este kit é composto por '+venda[0].product.amount+', até o momento foram informados '+(venda[0].items.length)+' itens, para concluir a venda é necessário confirmar o total de itens.';
+        const msg01 = 'Atenção: Este kit é composto por '+venda[0].product.amount+', até o momento não foram informados todos itens, para concluir a venda é necessário confirmar o total de itens.';
         sale.save();
         return res.status(201).send({ message: msg01});
       }else if((venda[0].product.amount-venda[0].items.length)==0) {
