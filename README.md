@@ -42,6 +42,7 @@ CRUD
 | POST   | `/products/sales/itens`         | Cancelar uma venda                                |
 | GET    | `/products/sales/concluded`     | Retornar todas as vendas concluídas               |
 | GET    | `/products/sales/canceled`      | Retornar todas as vendas canceladas               |
+| GET    | `/products/sales/pending`       | Retornar todas as vendas pendentes                |
 
 <br>
 

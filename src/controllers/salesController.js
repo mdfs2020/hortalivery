@@ -98,9 +98,15 @@ async function  postSales  (req, res)  {
       return res.status(201).send({venda});
     }; 
 
+    async function  getPendingSales  (req, res)  {
+      const venda = await sales.find({"situation": "Pending"});
+      return res.status(201).send({venda});
+    }; 
+
     module.exports = {
         postSales,
         postItemSales,
         getConcludedSales,
-        getCanceledSales
+        getCanceledSales,
+        getPendingSales
     };

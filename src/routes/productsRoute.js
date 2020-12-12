@@ -13,5 +13,6 @@ router.post("/sales", controllerSales.postSales);
 router.post("/sales/itens", controllerSales.postItemSales);
 router.get("/sales/concluded", controllerSales.getConcludedSales);
 router.get("/sales/canceled", controllerSales.getCanceledSales);
+router.get("/sales/Pending", controllerSales.getPendingSales);
 
 module.exports = router; 
